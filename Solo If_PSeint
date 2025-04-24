@@ -1,0 +1,43 @@
+Algoritmo Compra
+    // Solicitar los datos de los productos
+    Escribir "Ingrese el nombre del producto 1: "
+    Leer nombre1
+    Escribir "Ingrese el precio del producto 1: "
+    Leer precio1
+
+    Escribir "Ingrese el nombre del producto 2: "
+    Leer nombre2
+    Escribir "Ingrese el precio del producto 2: "
+    Leer precio2
+
+    Escribir "Ingrese el nombre del producto 3: "
+    Leer nombre3
+    Escribir "Ingrese el precio del producto 3: "
+    Leer precio3
+
+    // Calcular el total de la compra
+    total <- precio1 + precio2 + precio3
+
+    // Determinar el método de pago y los beneficios
+    Si total < 50000 Entonces
+        metodo <- "Efectivo"
+        beneficio <- "5% de descuento"
+    Sino
+        Si total <= 100000 Entonces
+            metodo <- "Tarjeta"
+            beneficio <- "Sin cambios"
+        Sino
+            metodo <- "Transferencia"
+            beneficio <- "2% de cashback"
+        FinSi
+    FinSi
+
+    // Mostrar el resumen de la compra
+    Escribir "\nResumen de la compra:"
+    Escribir nombre1, ": $", precio1
+    Escribir nombre2, ": $", precio2
+    Escribir nombre3, ": $", precio3
+    Escribir "Total de la compra: $", total
+    Escribir "Método recomendado: ", metodo
+    Escribir "Beneficio: ", beneficio
+FinAlgoritmo
